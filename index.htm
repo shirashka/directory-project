@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Shira S- Midterm</title>
+	
+	<!-- Jquery and Bootstrap CDN links: -->
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script><!-- Jquery version 3 -->
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+		
+	<!-- My Styles and Scripts: -->
+	<link href="style.css" rel="stylesheet">
+	<script src="directory.js" type="text/javascript"></script>
+</head>
+<body>
+<header class="myHeader">
+	<h1>Middle Georgia State University: Faculty Directory</h1>
+</header>	
+
+
+<div class="wrapper">
+	<h3 class="form-heading">Add New Faculty Member:</h3>
+	<form id="add_form">
+			<div class="row">
+				<div class="col-md-4">
+					<input type="button" id="save_button" value="Save"><!-- Save Button -->
+				</div>
+				<div class="col-md-8">
+				</div>
+			</div>
+			
+			<span id="err1" class="error"></span><!-- Error for role checkbox -->
+			<div class="row">	
+				<div class="col-md-4">
+					<label>My Role: </label>
+				</div>
+				<div class="col-md-8 role">
+					<input type="checkbox" name="role" id="f-role" value="Faculty"/>Faculty
+					<input type="checkbox" name="role" id="s-role" value="Staff"/>Staff
+				</div>
+			</div><!-- End row 1 = Role Checkbox -->
+			
+			<span id="err2" class="error"></span><!-- Error for dr checkbox -->		
+			<div class="row">	
+				<div class="col-md-4">
+					<label for="doctorate">Doctorate? </label>
+				</div>
+				<div class="col-md-8 doctorate">				
+					<input type="checkbox" name="doctorate" id="doctorate" value="Doctorate"/>Dr.
+				</div>
+			</div><!-- End row 2 = Dr. Checkbox -->
+			
+			<span id="err3" class="error"></span><!-- Error for first name -->		
+			<div class="row">
+				<div class="col-md-4">
+					<label for="first_name">First Name: </label>
+				</div>
+				<div class="col-md-8">				
+					<input type="text" id="first_name" required />
+				</div>
+			</div><!-- End row 3 = First Name -->
+			
+			<span id="err4" class="error"></span><!-- Error for last name -->		
+			<div class="row">
+				<div class="col-md-4">
+					<label for="last_name">Last Name: </label>
+				</div>
+				<div class="col-md-8">
+					<input type="text" id="last_name" required />
+				</div>
+			</div><!-- End row 4 = Last Name -->
+			
+			<span id="err5" class="error"></span><!-- Error for certifications -->	
+			<div class="row">
+				<div class="col-md-4">
+					<label for="certifications">Certifications: </label>
+				</div>
+				<div class="col-md-8">
+					<input type="text" id="certifications" />
+				</div>
+			</div><!-- End row 5 = Certifications -->
+			
+			<span id="err6" class="error"></span><!-- Error for title -->	
+			<div class="row">
+				<div class="col-md-4">
+					<label for="title">Title: </label>
+				</div>
+				<div class="col-md-8">				
+					<input type="text" id="title" required />
+				</div>
+			</div><!-- End row 6 = Title -->
+			
+			<span id="err7" class="error"></span><!-- Error for department -->	
+			<div class="row">
+				<div class="col-md-4">
+					<label for="department">Department: </label>
+				</div>
+				<div class="col-md-8">
+					<select id="department" class="required">
+						<option>School of Business</option>
+						<option>School of Information Technology</option>
+						<option>School of Education</option>
+						<option>School of Aviation</option>
+					</select>
+				</div>
+			</div><!-- End row 7 = Department -->
+			
+			<span id="err8" class="error"></span><!-- Error for phone number -->	
+			<div class="row">
+				<div class="col-md-4">
+					<label>Primary Phone #:</label>
+				</div>
+				<div class="col-md-8">
+					(<input type="text" id="phone1" maxlength="3" size="3"/>)
+					<input type="text" id="phone2" maxlength="3" size="3" />-
+					<input type="text" id="phone3" maxlength="4" size="4" />
+				</div>
+			</div><!-- End row 8 = Phone # -->
+			
+			<span id="err9" class="error"></span><!-- Error for email -->	
+			<div class="row">
+				<div class="col-md-4">
+					<label for="email">Email:</label>
+				</div>
+				<div class="col-md-8">
+					<input type="email" id="email" />
+				</div> <!-- End row 9 = Email -->
+			</div>
+			
+			<span id="err10" class="error"></span><!-- Error for website -->	
+			<div class="row">
+				<div class="col-md-4">
+					<label for="website">Website:</label>
+				</div>
+				<div class="col-md-8">
+					<input type="url" id="website" />
+				</div> <!-- End row 10 = Website -->
+			</div>
+		
+	</form><!-- End form -->
+</div> <!-- end wrapper (1) -->
+<div class="wrapper2" id="hidden">
+	
+	<div class="row editRow">
+		<div class="col-md-12" >	
+			<h3 class="form-heading">Faculty &amp; Staff Directory:</h3>
+			
+			<div class="myDirectory">
+				<div id="staff1" class="col-md-6 show">
+					<h4>Alan Stines<span class="smallCert">, MACS</span></h4>
+					<p><em>MGA Faculty Member</em></p>
+					<p>Lecturer<br/>
+					Department of Information Technology</p>
+					<p><a href="mailto:alan.stines@mga.edu">alan.stines@mga.edu</a><br/>
+					Phone: (478)-477-0831 </p>
+					<p><a href="http://facultyweb.mga.edu">http://facultyweb.mga.edu</a></p>
+				</div>
+				<div id="staff2" class="col-md-6 show">
+					<h4 id="staffName"></h4>
+					<div id="details"></div>
+				</div>
+			</div><!-- end myDirectory -->
+		</div>
+	</div>	
+</div><!-- end wrapper2 -->
+<footer>
+&copy; Shira Shkarofsky
+</footer>
+
+</body>
+</html>

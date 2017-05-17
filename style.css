@@ -1,0 +1,47 @@
+
+/* General Styles */
+body {margin:0; padding:0; background-color: #e5e5e5; max-width:100%; }
+
+
+.wrapper {width: 90%; margin: 1% auto;  padding: 0px; }
+.myHeader h1 {margin:0; font-size: 30px; padding-bottom: 10px; padding-top: 20px;
+			color:white; text-align:center; background-color:#633393;} 
+.form-heading {font-size: 1.3em; font-weight:bold; text-align: center; }
+
+/* Form: */
+#add_form {width: 39%; margin: 0 auto; background-color: white; border: 2px solid black;
+		padding: 1% 3% 1% 1%;  text-align: center; }
+.col-md-4, .col-md-8 {margin: 3px 0;}
+.col-md-8 {padding: 0 5px; text-align: left;}
+.col-md-4 {text-align: right; font-weight:bold;}
+.role, .doctorate {text-align:left; font-weight: normal;}
+#f-role {margin-right: 3px;}
+#s-role {margin-left: 10px; margin-right:3px;}
+.error {text-align:left; color:red; font-weight:bold;}
+
+/* Save Button */
+#save_button {background-color: #633393; padding: 5px 10px; color:white;
+			  font-weight:bold; margin-bottom: 5px;  box-shadow: 3px 3px 3px #888888;}
+			  
+/* Hidden Section */
+.editRow {margin: 0;}
+.show {background-color: #e5e5e5; border: 2px solid black; min-height: 250px;}
+.wrapper2 {margin: 0; padding:0; background-color:#B7BD35; border-top: #633393 solid 15px;}
+.myDirectory { background-color: #e5e5e5; margin:0; padding: 0;}
+#staff1, #staff2 {padding: 1% 1% 1% 6%;}
+.smallCert, #smallCert2 {font-size: 0.8em; color: #868686;}
+/* Footer */
+footer {background-color: #633393; color: white; font-weight:bold; text-align:center; padding: 10px 0;}
+
+
+/* Media Queries (Just b/c it was bugging me ;) */
+@media screen and (max-width: 1200px) {
+	#add_form {width: 45%;}
+}
+@media screen and (max-width: 1000px) {
+	.col-md-8 {padding-left: 20px;}
+	.col-md-4 {text-align: left;}
+}
+@media screen and (max-width: 600px) {
+	#add_form {width: 75%;}
+}
